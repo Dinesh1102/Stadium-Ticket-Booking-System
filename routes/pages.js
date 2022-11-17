@@ -1,0 +1,54 @@
+const express = require('express');
+const router = express.Router();
+router.get('/',function(req,res){
+  res.render('index');
+});
+router.get('/register',function(req,res){
+   res.render('register');
+}); 
+router.get('/registerback',function(req,res){
+  res.render('registerback');
+}); 
+router.get('/login',function(req,res){
+   res.render('login');
+}); 
+router.get('/loginback',function(req,res){
+  res.render('loginback');
+}); 
+router.get('/cancel',function(req,res){
+   res.render('cancel');
+ });
+ router.get('/cancelled',function(req,res){
+   res.render('cancelled');
+ });
+ router.get('/contact',function(req,res){
+   res.render('contact');
+ });
+ router.get('/instructions',function(req,res){
+   res.render('instructions');
+ });
+ router.get('/success',function(req,res){
+   res.render('success');
+ });
+ router.get('/overview',function(req,res){
+  res.render('overview');
+});
+router.get('/profile',function(req,res){
+  res.render('profile');
+});
+router.get('/loggedin',function(req,res){
+  res.render('loggedin');
+});
+router.get('/book_ticket',function(req,res){
+  res.render('book_ticket');
+});
+router.get('/display',function(req,res){
+  res.render('display');
+});
+router.get('/admin',function(req,res){
+  res.render('admin');
+});
+router.get('/cancel_game',function(req,res){
+  res.render('cancel_game');
+});
+module.exports = router;

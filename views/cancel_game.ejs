@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Rights</title>
+</head>
+<script>
+    function validateForm() {
+    var x = document.forms["myForm"]["game_id"].value;
+    if (x == "" || x == null) {
+      alert("Game ID can't be empty");
+      return false;
+    }
+   }
+  </script>
+<body>
+    <% if(typeof message!="undefined"&&message){ %><h4 class="alert mt-4" style="text-align: center;"><%=message%></h4><% } %>
+    <form action="/auth_route/cancel_game" name="myForm" onsubmit="return validateForm()" method="post">
+        <label for="game_id"><h3>Enter ID of game to be cancelled</h3></label>
+        <input id="game_id" type="text" name="game_id">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancelled!!</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form action="">
+                <div class="card-header">
+                    <h2 class="alert-heading">GAME CANCELLED!</h2>
+                </div>
+                <div class="card-body" style="padding-bottom: 50px;">
+                    <p class="card-text"> Game ID : <%= data[0].game_id %> </p>
+                    <p class="card-text"> Game Title : <%= data[0].game_title %> </p>
+                    <p class="card-text"> Game Date : <%= data[0].date_of_game %> </p>
+                    <a href="/" class="button">HOME</a>
+                </div>
+                <div class="card-footer text-muted">
+                    Show Cancelled!! Email sent to audience successfully.
+                </div>
+            </form>
+        </div>
+    </div>
+    <style>
+        body {
+	     background: #EEF1FF;
+	     display: flex;
+	     justify-content: center;
+	     align-items: center;
+	     flex-direction: column;
+	     font-family: 'Montserrat', sans-serif;
+	     height: 100vh;
+	     margin: -20px 0 50px;
+        }
+        h2{
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        form {
+	     background-color: #FFFFFF;
+	     display: flex;
+	     align-items: center;
+	     justify-content: center;
+	     flex-direction: column;
+	     padding: 0 80px;
+	     height: 100%;
+	     text-align: center;
+        }
+        .container {
+	     background-color: #fff;
+	     border-radius: 10px;
+  	      box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+			0 10px 10px rgba(0,0,0,0.22);
+	      position: relative;
+	      overflow: hidden;
+	      width: 450px;
+	      max-width: 100%;
+	      min-height: 400px;
+        }
+        .form-container {
+	     position: absolute;
+	     top: 0;
+	     height: 100%;
+        }
+        .button {
+	     border-radius: 20px;
+	     border: 1px solid #FAF7F0;
+	     background-color: #FAF7F0;
+	     color: black;
+	     font-size: 12px;
+	     font-weight: bold;
+	     padding: 12px 45px;
+	     letter-spacing: 1px;
+	     text-transform: uppercase;
+	     border-color:black ;
+	     font-style: italic;
+	     cursor: pointer;
+         opacity: 0.8;
+         transition: 0.2s;
+         margin-top: 20px;
+        } 
+    </style>
+</body>
+</html>

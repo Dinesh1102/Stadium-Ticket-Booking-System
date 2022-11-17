@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+<body>
+ <div style="padding-left: 100px;" >
+    <h3 style="font-weight: bold;">To adress an issue via mail</h3>
+    <form  action="mailto:kilariharshavn@gmail.com" method="post" enctype="text/plain">
+      <p>Issue in:</p>
+      <label >Payment methods</label>
+      <input type="radio" name="xy"><br /><br />
+      <label >Webpage issues</label>
+      <input type="radio" name="xy"><br /><br />
+      <label >Unable to select multiple seats</label>
+      <input type="radio" name="xy"><br /><br />
+      <label >Other issues</label>
+      <input type="text"><br /><br />
+      <input type="submit" style="background-color: azure;">
+    </form>
+    
+ </div>
+ <%if(typeof employee!="undefined" && employee){%>
+  <div style="padding-left: 8%; padding-right: 10%; padding-bottom: 5%;">
+    <div style="padding-top: 3%;" class="w3-container">    
+      <table class="w3-table-all w3-hoverable">
+        <thead>
+          <tr class="w3-light-grey">
+            <th>Employee Name</th>
+            <th>Department</th>
+            <th>Mobile Number</th>
+          </tr>
+        </thead>
+        <%if(employee.length){ for(var i=0;i< employee.length;i++){%>
+            <tr>
+                <td><%=employee[i].employee_name%></td>
+                <td><%=employee[i].department%></td>
+                <td><%=employee[i].mobile_no%></td>
+            </tr>
+         <% } %>
+        <% } %>
+      </table>
+    </div>
+  </div>
+  <%}%>
+ 
+ <style>
+    body{
+     background: white;
+     align-items: center;
+     font-size:20px;
+     background-image:url('https://t4.ftcdn.net/jpg/02/83/13/61/360_F_283136113_b3VRHNiOPFMOluzYJPpfuoH8Czh9c743.jpg') ;
+     background-repeat: no-repeat;
+     background-size: 1800px 1000px;
+    }
+
+ </style>
+
+  </body>
+</html>

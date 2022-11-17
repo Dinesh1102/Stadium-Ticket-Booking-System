@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book ur tickets!!</title>
+    <script>
+      function validateForm() {
+      var x = document.forms["myForm"]["no_of_seats"].value;
+      if (x == "" || x == null) {
+        alert("Seats must be filled out");
+        return false;
+      }
+     }
+    </script>
+</head>
+<body>
+  <table>
+    <tr>
+      <td>
+        <img class="stadium"  src="https://ik.imagekit.io/enmedia/Football/seating-plans/santiago-bernabeu.jpg"  width="80%">
+      </td>
+      <td>
+        <form name="myForm" onsubmit="return validateForm()" action="/auth_route/select" method="post">
+          <div>
+            <% if(typeof message!="undefined"&&message){ %><h2 class="alert alert-danger mt-4" style="text-align: center; background-color:#BCEAD5"><%=message%></h2><% } %>
+          </div>
+          <div class="noofseats" >
+            <h3>
+            <label  for="seats" >Select number of seats: </label>
+            </h3>
+            <input type="number" id="seats" name="no_of_seats" min="1" max="10">
+          </div>
+            <div>
+              <table>
+                <tr>
+                  <td>
+                    <div class="marker" data-ng-style="getMarkerStyle(seatArea.id)" data-ng-show="!(tickets.selectedSourcePriceType.isMapStaticImage)"
+                     style="background-color: #A09F57; border-color: #A09F57; border-width: 2px;">&nbsp;</div>
+                   </td>
+                   <td>
+
+
+                    <h2>Rapt Premium <span style="visibility:hidden">hellooo</span></h2>
+                    <h4>Price: $100</h4>
+                  </td>
+                  <td>
+                    <div class="selectbutton">
+                      <button type="submit" name="class_name" value="Rapt Premium">Select</button>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <td>
+                    <div class="marker" data-ng-style="getMarkerStyle(seatArea.id)" data-ng-show="!(tickets.selectedSourcePriceType.isMapStaticImage)"
+                     style="background-color: #9D9D9D; border-color: #9D9D9D; border-width: 2px;">&nbsp;</div>
+
+
+                     </td>
+                     <td>
+                    <h2>Flag Premium <span style="visibility:hidden">hellooo</span></h2>
+                    <h4>Price: $80</h4>
+                  </td>
+                  <td>
+                    <div class="selectbutton">
+                      <button type="submit" name="class_name" value="Flag Premium">Select</button>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+
+                  <td>
+                    <div class="marker" data-ng-style="getMarkerStyle(seatArea.id)" data-ng-show="!(tickets.selectedSourcePriceType.isMapStaticImage)"
+                     style="background-color: #905E96; border-color: #905E96; border-width: 2px;">&nbsp;</div>
+                   </td>
+                   <td>
+                  <h2>Middle-EastWest<span style="visibility:hidden">hellooo</span></h2>
+                  <h4>Price: $60</h4>
+
+
+                  </td>
+                  <td>
+                    <div class="selectbutton">
+                      <button type="submit" name="class_name" value="Middle-EastWest">Select</button>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <table class="end">
+                <tr>
+                  <td>
+                    <div class="marker" data-ng-style="getMarkerStyle(seatArea.id)" data-ng-show="!(tickets.selectedSourcePriceType.isMapStaticImage)"
+                     style="background-color: #277BC0; border-color: #277BC0; border-width: 2px;">&nbsp;</div>
+                   </td>
+                   <td>
+                    <h2>Middle-NorthSouth<span style="visibility:hidden">hel</span> </h2>
+                    <h4>Price: $40</h4>
+                  </td>
+                  <td>
+                    <div class="selectbutton">
+                      <button type="submit" name="class_name" value="Middle-NorthSouth">Select</button>
+                    </div>
+
+                  </td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                  <td>
+                    <div class="marker" data-ng-style="getMarkerStyle(seatArea.id)" data-ng-show="!(tickets.selectedSourcePriceType.isMapStaticImage)"
+                     style="background-color: #379237; border-color: #379237; border-width: 2px;">&nbsp;</div>
+                   </td>
+                   <td>
+                    <h2>End-EastWest <span style="visibility:hidden">he</span> </h2>
+                    <h4>Price: $20</h4>
+                  </td>
+                  <td>
+                    <div class="selectbutton">
+                      <button type="submit" name="class_name" value="End-EastWest">Select</button>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                  <td>
+                    <div class="marker" data-ng-style="getMarkerStyle(seatArea.id)" data-ng-show="!(tickets.selectedSourcePriceType.isMapStaticImage)"
+                     style="background-color: #FFA931; border-color: #FFA931; border-width: 2px;">&nbsp;</div>
+                   </td>
+                   <td>
+                    <h2>End-NorthSouth <span style="visibility:hidden">helloo</span> </h2>
+                    <h4>Price: $10</h4>
+                  </td>
+                  <td>
+                    <div class="selectbutton">
+                      <button type="submit" name="class_name" value="End-NorthSouth">Select</button>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+            </div>
+            <input type="hidden" name="email_id" value="<%=email_id%>">
+            <input type="hidden" name="game_id" value="<%=game_id%>">
+
+          </div>
+        </form>
+      </td>
+    </tr>
+  </table>
+<style>
+.marker{
+  height:50px;
+  width: 15px;
+
+  border-radius:25px;
+}
+  .alert{
+    padding: 15px;
+    border-radius: 5px;
+  }
+  body{
+  background: white;
+  align-items: center;
+  background-image:url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v960-ning-30.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=63dd5f402645ef52fb7dfb592aec765a');  ;
+  background-repeat: no-repeat;
+  background-size: 1800px 1000px;
+  }
+
+  </style>
+
+
+</body>
+</html>

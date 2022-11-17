@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Ticket!!</title>
+    <script>
+        function validateForm() {
+        var x = document.forms["myForm"]["ticket_id"].value;
+        var y = document.forms["myForm"]["email_id"].value;
+        if (x == "" || x == null) {
+          alert("Ticket_id can't b empty");
+          return false;
+        }
+        if (y == "" || y == null) {
+          alert("Email_id can't be empty");
+          return false;
+        }
+       }
+    </script>
+</head>
+<body>
+    <div style="text-align: center;">
+        <% if(typeof message!="undefined"&&message){ %><h4 class="alert mt-4" style="text-align: center;"><%=message%></h4><% } %>
+     </div>
+    <div class="container">
+        
+        <div class="form-container">
+            <form name="myForm" action="/auth_route/cancel" method="post" onsubmit="return validateForm()">
+                <h1>Cancel Ticket</h1>
+                <input name="ticket_id" type="text" placeholder="Ticket ID" autocomplete="off"  />
+                <input name="email_id" type="email" placeholder="Email address" style="margin-top: 20px;" autocomplete="off">
+                <input type="password" name="password" placeholder="password" id="logpass" autocomplete="off"> 
+                <table style="margin-top: 10px">
+                    <tr>
+                        <td><input type="checkbox" name="remember" required/></td>
+                        <td>I have read the <a href="/instructions">instructions</a> carefully.</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td style="padding-right: 8px;"><button type="submit" class="button">Submit</button></td>
+                        <td style="padding-left: 8px; padding-top:22px;"><a href="/" class="button">Back</a></td>
+                    </tr>
+                </table>            
+            </form>
+        </div>
+       <style>
+        body {
+	     background: #EEF1FF;
+	     display: flex;
+	     justify-content: center;
+	     align-items: center;
+	     flex-direction: column;
+	     font-family: 'Montserrat', sans-serif;
+	     height: 100vh;
+	     margin: -20px 0 50px;
+        }
+        h1{
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+        input {
+	     background-color: #FAF7F0;
+	     border: none;
+	     padding: 12px 15px;
+	     margin: 8px 0;
+	     width: 100%;
+        }
+        form {
+	     background-color: #FFFFFF;
+	     display: flex;
+	     align-items: center;
+	     justify-content: center;
+	     flex-direction: column;
+	     padding: 0 80px;
+	     height: 100%;
+	     text-align: center;
+        }
+        .container {
+	     background-color: #fff;
+	     border-radius: 10px;
+  	      box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+			0 10px 10px rgba(0,0,0,0.22);
+	      position: relative;
+	      overflow: hidden;
+	      width: 450px;
+	      max-width: 100%;
+	      min-height: 400px;
+        }
+        .form-container {
+	     position: absolute;
+	     top: 0;
+	     height: 100%;
+        }
+        .button {
+	     border-radius: 20px;
+	     border: 1px solid #FAF7F0;
+	     background-color: #FAF7F0;
+	     color: black;
+	     font-size: 12px;
+	     font-weight: bold;
+	     padding: 12px 45px;
+	     letter-spacing: 1px;
+	     text-transform: uppercase;
+	     border-color:black ;
+	     font-style: italic;
+	     cursor: pointer;
+         opacity: 0.8;
+         transition: 0.2s;
+         margin-top: 20px;
+        } 
+
+      </style>
+    </div>
+    
+</body>
+</html>

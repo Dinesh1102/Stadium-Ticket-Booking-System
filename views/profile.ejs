@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Profile</title>
+</head>
+<body>
+  
+  <form action="">
+    <table>
+      <tr>
+        <td style="width: 300px; padding-right: 100px;">
+          <img src="https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=" alt="Card image" style="width:100%">
+
+        </td>
+        <td>
+          <div>
+            <span style="display: inline;"><h2>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%=name%></h2></span>
+          </div>
+          <div>
+            <span style="display: inline;"><h2>Email_id:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%=email_id%></h2></span>
+          </div>
+          <div>
+            <span style="display: inline;"><h2>Successful Bookings:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%=count%></h2></span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <div style="padding-left: 8%; padding-right: 10%; padding-bottom: 5%;">
+    <h2>My Bookings:</h2>
+    <div style="padding-top: 3%;" class="w3-container">    
+      <table class="w3-table-all w3-hoverable">
+        <thead>
+          <tr class="w3-light-grey">
+            <th>Game Title</th>
+            <th>Date Of Match</th>
+            <th>Seat Numbers</th>
+            <th>Ticket ID's</th>
+          </tr>
+        </thead>
+        <%if(booked.length){ for(var i=0;i< booked.length;i++){%>
+            <tr>
+                <td><%=booked[i].game_title%></td>
+                <td><%=booked[i].game_date%></td>
+                <td><%=booked[i].seat_no%></td>
+                <td><%=booked[i].ticket_id%></td>
+            </tr>
+         <% } %>
+        <% } %>
+      </table>
+    </div>
+  </div>
+  <div style="padding-left: 8%; padding-right: 10%; padding-bottom: 5%;">
+    <h2>Cancelled Bookings:</h2>
+    <div style="padding-top: 3%;" class="w3-container">    
+      <table class="w3-table-all w3-hoverable">
+        <thead>
+          <tr class="w3-light-grey">
+            <th>Game Title</th>
+            <th>Cancelled Date</th>
+          </tr>
+        </thead>
+        <%if(cancelled.length){ for(var i=0;i< cancelled.length;i++){%>
+            <tr>
+                <td><%=cancelled[i].game_title%></td>
+                <td><%=cancelled[i].cancelled_date%></td>
+            </tr>
+         <% } %>
+        <% } %>
+      </table>
+    </div>
+  </div>
+  
+<style>
+  form{
+    background-color: #FFFFFF;
+     display: flex;
+     /* align-items: center; */
+     justify-content: center;
+     flex-direction: column;
+     padding: 0 80px;
+     height: 100%;
+     /* text-align: center; */
+  }
+  .container{
+    position: relative;
+  }
+</style>
+</body>
+</html>
