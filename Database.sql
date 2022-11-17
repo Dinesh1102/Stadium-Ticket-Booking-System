@@ -1,3 +1,7 @@
+create database stadium_ticket_booking;
+
+use stadium_ticket_booking;
+
 create table users(
    id int auto_increment,
    full_name varchar(50),
