@@ -1,9 +1,9 @@
 # Stadium-Ticket-Booking-System
 
 # Description
-User will be able to book upto 10 tickets at once. Cancellation of single ticket is allowed even if multiple tickets are booked. User can pre-order food and book a parking slot while booking his tickets. 
-Everyone who booked tickets for a match receives an email whenever match is cancelled due to unforeseen circumstances. One can know the information about upcoming matches at least a month before and be able to cancel his ticket any time before the match day for a refund of half the ticket price.
-One can view their profile after logging in successfully which contains information about his booked tickets and cancelled tickets.
+Users will be able to book up to 10 tickets at once. Cancellation of a single ticket is allowed even if multiple tickets are booked. Users can pre-order food and book a parking slot while booking their tickets. 
+Everyone who booked tickets for a match receives an email whenever a match is canceled due to unforeseen circumstances. One can know the information about upcoming matches at least a month before and be able to cancel his ticket any time before the match day for a refund of half the ticket price.
+One can view their profile after logging in successfully which contains information about their booked tickets and canceled tickets.
 
 # Views
 This folder contains all the ejs files which contains all the html codes along with their stylings. Views folder contains codes for pages like book ticket, cancel ticket, view profile, admin rights etc.
