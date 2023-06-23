@@ -27,4 +27,4 @@ This contains entity relationship of the database.
 This contains relational schema of the database.
 
 # How to use the website?
-Create database in MySQL workbench with the sql code in Database.sql file. Then run app.js file in the terminal using command 'nodemon app.js' and there you go, your application is now running on local host with port number 3000.
+Create database in MySQL workbench with the sql code in Database.sql file. Change the credentials in .env file. Then run app.js file in the terminal using command 'nodemon app.js' and there you go, your application is now running on local host with port number 3000.
